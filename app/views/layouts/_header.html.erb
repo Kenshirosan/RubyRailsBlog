@@ -1,0 +1,21 @@
+<header>
+    <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md navbar-light">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <%= link_to "Blog", '/', class: "navbar-brand"  %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "Read articles", {controller: 'articles'}, class: "nav-link"  %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "Create an article", new_article_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "Register a user", new_user_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "Users", {controller: 'users'}, class: "nav-link" %>
+            </li>
+        </ul>
+    </nav>
+</header>

@@ -1,0 +1,8 @@
+{
+  "name": "testBlogRubyRails",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "moment": "^2.18.1"
+  }
+}
