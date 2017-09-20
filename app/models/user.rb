@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    # attr_accessor :name, :email, :password
+
     has_many :articles, dependent: :destroy
     has_many :comments, dependent: :destroy
     before_save { email.downcase! }
