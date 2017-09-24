@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    include SessionsHelper
 
     def index
         @users = User.all
@@ -16,11 +17,17 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
 
         if @user.save
+            log_in @user
             flash[:success] = "Welcome to kickass blog!"
             redirect_to @user
         else
+            flash[:error] = "Something went wrong, please try again in a few minutes!"
             render 'new'
         end
+    end
+
+    def destroy
+
     end
 
     private
