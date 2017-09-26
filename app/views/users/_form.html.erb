@@ -1,18 +1,6 @@
 <%= form_with model: @user, class: "form-horizontal", local: true do |form| %>
 
-  <% if @user.errors.any? %>
-    <div id="error_explanation" class="alert alert-danger">
-      <h2 class="text-danger">
-        <%= pluralize(@user.errors.count, "error") %> prohibited
-        this user from being saved:
-      </h2>
-      <ul>
-        <% @user.errors.full_messages.each do |error| %>
-          <li class="text-danger"><%= error %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= render 'shared/error_messages' %>
 
   <div class="form-group">
     <%= form.label :name , class:"col-md-4 control-label" %><br>

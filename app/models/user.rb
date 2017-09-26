@@ -1,8 +1,8 @@
 class User < ApplicationRecord
     attr_accessor :remember_token
 
-    has_many :articles, dependent: :destroy
-    has_many :comments, dependent: :destroy
+    # has_many :articles, dependent: :destroy
+    # has_many :comments, dependent: :destroy
     before_save { email.downcase! }
 
     validates :name, presence: true, length: { maximum: 50 }
@@ -12,7 +12,7 @@ class User < ApplicationRecord
                 uniqueness:  { case_sensitive: false }
 
     has_secure_password
-    validates :password, confirmation:true, presence: true, length: { minimum: 6 }
+    validates :password, confirmation:true, presence: true, length: { minimum: 6 }, allow_nil: true
 
     def User.digest(string)
         cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

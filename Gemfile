@@ -5,7 +5,11 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+gem 'bootstrap-sass', '3.3.7'
+gem 'jquery-rails', '4.3.1'
+# pagination
+gem 'will_paginate',           '3.1.5'
+gem 'bootstrap-will_paginate', '1.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use sqlite3 as the database for Active Record
@@ -29,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
+# faker
+ gem 'faker',   '~> 1.7.3'
 # User authentication
  gem 'devise' #not implemented yet
 # Use mysql/mariadb

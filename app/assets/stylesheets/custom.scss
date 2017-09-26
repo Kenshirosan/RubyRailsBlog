@@ -1,5 +1,6 @@
 /* mixins, variables, etc. */
-
+// @import "bootstrap-sprockets";
+// @import "../bootstrap";
 $gray-medium-light: #eaeaea;
 
 /* universal */
@@ -35,4 +36,27 @@ textarea {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-medium-light;
+  }
+}
+
+.with-padding {
+  padding: .2em;
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.gravatar_edit {
+  margin-top: 15px;
 }
