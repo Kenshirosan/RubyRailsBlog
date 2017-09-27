@@ -4,25 +4,35 @@ laurent:
   email: laurent.sama@gmail.com
   password_digest: <%= User.digest('password') %>
   admin: true
+  activated: true
+  activated_at: "2017-09-27 10:38:06"
 
 archer:
   name: Sterling Archer
   email: duchess@example.gov
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: "2017-09-27 10:38:06"
 
 lana:
   name: Lana Kane
   email: hands@example.gov
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: "2017-09-27 10:38:06"
 
 malory:
   name: Malory Archer
   email: boss@example.gov
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: "2017-09-27 10:38:06"
 
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: "2017-09-27 10:38:06"
 <% end %>

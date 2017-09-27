@@ -28,7 +28,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
                                          password_confirmation: "totovaalaplage" } }
         end
         follow_redirect!
-        assert_template 'users/show'
+        assert_template 'welcome/index'
     end
 
     test "edit path should redirect when not logged in" do
