@@ -4,7 +4,9 @@
 $gray-medium-light: #eaeaea;
 
 /* universal */
-
+header {
+  padding-bottom: 0.5em;
+}
 section {
   overflow: auto;
 }
