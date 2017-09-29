@@ -3,12 +3,10 @@
 <%= link_to("Blog", controller: 'articles') %>
 <%= link_to("Create an article", new_article_path) %>
 
-<h1>tests</h1>
-
-<p><%= @link %></p>
-<p><%= @title %></p>
-<p><%= @item %></p>
-
-
+<% if logged_in? %>
+  <%= render 'welcome/logged' %>
+<% else %>
+  <%= render 'homepage' %>
+<% end %>
 
 

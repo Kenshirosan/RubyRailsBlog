@@ -1,6 +1,6 @@
 <%= form_with model: @user, class: "form-horizontal", local: true do |form| %>
 
-<%= render 'shared/error_messages' %>
+<%= render 'shared/error_messages', object: form.object %>
 
   <div class="form-group">
     <%= form.label :name , class:"col-md-4 control-label" %><br>
