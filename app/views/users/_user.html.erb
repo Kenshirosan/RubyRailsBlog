@@ -1,0 +1,10 @@
+<li>
+    <%= gravatar_for user, size: 50 %>
+    <%= link_to user.name, user %>
+    <%= link_to 'Show', user_path(user), class:"float-right with-padding" %>
+    <% if current_user.admin? && !current_user?(user) %>
+    <%= link_to 'Destroy', user_path(user), class:"float-right with-padding",
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' } %>
+    <% end %>
+</li>
