@@ -14,5 +14,8 @@ update your database credentials in config/database.yml
 rails db:migrate
 ```
 ```
+rails db:seed
+```
+```
 rails s
 ```
