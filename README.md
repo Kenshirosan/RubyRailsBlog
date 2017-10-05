@@ -1,4 +1,4 @@
-# Just Working on a Simple Blog
+# small twitter clone
 
 * Ruby 2.4.1
 * Rails 5.1.4
